@@ -48,13 +48,12 @@
       background: #000000e5;;
       width: 100%;
       ul{
-         li{font-size: 2.5rem;
+         li{font-size: 2.5rem; 
             font-weight: 500;
             border-radius: 2vw;
             overflow: hidden;
             img{width: 100%;
-               height: 100%; 
-               transition: all .3s ease-out;
+                transition: all .3s ease-out; 
                }
             img:hover{transform: scale(1.13) rotate(5deg);
                       transition: all .3s ease-out;}
@@ -68,8 +67,8 @@
          grid-gap: 10px;
          justify-items: center;
          grid-template-areas:
-             'a a a b b c'
-             'd e f b b c'
+             'a a a b b b'
+             'd e f b b b'
              'h h h h i i'
              'h h h h i i';
       
@@ -84,13 +83,13 @@
                         padding-top: 10px;}
                   }
                }
-         .sec1_2 { grid-area: b;}
-         .sec1_3 { grid-area: c;}
+         .sec1_2 { grid-area: b; background: url(../images/sec1_2.png) no-repeat; width: 100%; background-position: center; background-size: cover;}
+         /* .sec1_3 { grid-area: c;} */
          .sec1_4 { grid-area: d;}
          .sec1_5 { grid-area: e;}
          .sec1_6 { grid-area: f;}
          /* .sec1_7 { grid-area: g;} */
-         .sec1_8 { grid-area: h; background: #000;}
+         .sec1_8 { grid-area: h; background: url(../images/sec1_8.jpg) no-repeat; width: 100%; height: 100%;background-position: center; background-size: cover;}
          .sec1_9 { grid-area: i; border-radius: 0;
                      dl{margin-top: 20%; margin-left: 30px;
                         dt{font-size: 2.3rem;
@@ -696,11 +695,12 @@
                      'h h h';
 
                      .sec1_1 { margin: 0;
-                     dl{font-size: 10px; text-align: center;
-                        dt{width: max-content; margin: 0 auto;}
-                        dd{font-size: 3.2vw; padding: 5vw 0; width: 70.2vw;}}
+                        dl{font-size: 10px; text-align: center;
+                           dt{width: max-content; margin: 0 auto;}
+                           dd{font-size: 3.2vw; padding: 5vw 0; width: 70.2vw;}}
                      }
                      .sec1_3{display: block;}
+                     .sec1_8{height: 250px;}
                      .sec1_9 {margin: 0;
                               dl {padding: 5vw 0;
                                  dt{font-size: 2.5rem;
