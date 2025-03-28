@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute
+  position: absolute;
 }
 
 #imgBG {
@@ -24,7 +24,7 @@
   width: 100%;
   margin: 0;
   height: auto;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
   position: relative;
   margin-top: 100vh;
 }
@@ -43,10 +43,10 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
 }
 
 #content p {
-  margin: 20px auto 100px;
+  margin: 2% auto 6%;
   text-align: center;
   font-weight: 300;
-  width: 35%;
+  width: 60%;
   font-size: 1.1rem;
 }
 
@@ -101,8 +101,10 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
 }
 
 #content {
-
   /* sec0 */
+  .sec0 {
+    padding-bottom: 0;
+  }
   .sec0 div {
     width: 100%;
     height: 500px;
@@ -120,6 +122,8 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     display: flex;
     justify-content: space-around;
     gap: 25px;
+    align-items: flex-end;
+    margin-top: 100px;
   }
 
   .sec1 .left_box {
@@ -166,7 +170,6 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     color: #000;
     padding: 85px 50px;
     position: relative;
-    margin-top: 190px;
   }
 
   .sec1 .right_box dl {
@@ -197,7 +200,7 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     width: max-content;
     padding: 10px 20px;
     border-radius: 10vw;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
   }
 
   .sec1 .right_box button {
@@ -208,14 +211,14 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     width: max-content;
     padding: 10px 20px;
     border-radius: 2vw;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     cursor: pointer;
   }
 
   .sec1 .right_box span:hover {
-    background: #1F7DF2;
+    background: #1f7df2;
     color: #fff;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
   }
 
   .sec1 .right_box .button_box {
@@ -255,10 +258,9 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
       width: 40%;
       height: 740px;
       background: url(../images/sub3/sec0_FAQ.jpg);
-      background-attachment: fixed;
-      background-position: left;
+      background-position: center;
       background-repeat: no-repeat;
-      background-size: 42%;
+      background-size: cover;
       border-radius: 2vw;
     }
 
@@ -336,7 +338,8 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     }
 
     .accordion__item.collapsing .accordion__item-desc {
-      animation: accordion-fade-slide-out var(--anim-dur) var(--ease-out) forwards;
+      animation: accordion-fade-slide-out var(--anim-dur) var(--ease-out)
+        forwards;
     }
   }
 
@@ -351,12 +354,10 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
   }
 }
 
-
 /* 일반 PC */
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
   #content {
     .sec0 p {
-      width: 40%;
     }
 
     .sec1 .left_box p {
@@ -373,11 +374,11 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     }
 
     .sec1 .right_box dl dd {
-      font-size: .95rem;
+      font-size: 0.95rem;
     }
 
     .sec1 .right_box span {
-      font-size: .95rem;
+      font-size: 0.95rem;
     }
 
     .sec1 .right_box {
@@ -385,8 +386,14 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
       gap: 20px;
     }
 
+    .sec1 .right_box .button_box {
+      bottom: 22px;
+      top: auto;
+      font-size: 1.8rem;
+    }
+
     .sec2 p {
-      width: 45%;
+      width: 80%;
     }
 
     .sec2 .accordion__item-btn {
@@ -404,14 +411,23 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
 
     span {
       font-size: 2.3rem;
-      padding-bottom: 10px
+      padding-bottom: 10px;
     }
   }
 }
 
 /* 테블릿 */
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 1024px) {
   #content {
+    .sec0 div {
+      background-attachment: local;
+      border-radius: 2vw;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .sec0 p {
+      width: 80%;
+    }
     .sec1 .left_box p {
       font-size: 2.8rem;
     }
@@ -434,7 +450,7 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     }
 
     .sec1 .right_box dl dd {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
 
     .sec1 .right_box {
@@ -446,26 +462,35 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
       gap: 10px;
       position: static;
     }
+    .sec2_inner {
+      flex-direction: column;
+    }
 
+    .sec2 .accordion {
+      width: 100%;
+    }
+    .sec2 .sec2_img {
+      background: url(../images/sub3/sec0_FAQ2.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 400px;
+    }
   }
-
 }
 
-
 /* 소형 테블릿 */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   #content {
     .sec0 p {
       width: 80%;
-      font-size: .9rem;
+      font-size: 0.9rem;
       line-height: 1.2rem;
     }
-
     .sec0 div {
       width: 90%;
       height: 300px;
-      margin: 0 auto;
-      border-radius: 2vw;
     }
 
     .sec1 {
@@ -489,26 +514,8 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     }
 
     .sec2 p {
-      width: 55%;
-      font-size: .9rem;
+      font-size: 0.9rem;
       line-height: 1.2rem;
-    }
-
-    .sec2_inner {
-      flex-direction: column;
-    }
-
-    .sec2 .sec2_img {
-      background: url(../images/sub3/sec0_FAQ2.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 300px;
-    }
-
-    .sec2 .accordion {
-      width: 100%;
     }
 
     span {
@@ -525,9 +532,8 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
   }
 }
 
-
 /* 모바일 */
-@media screen and (max-width:640px) {
+@media screen and (max-width: 640px) {
   #content {
     .sec0 div {
       height: 300px;
@@ -551,17 +557,15 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     }
 
     .sec2 p {
-      width: 80%;
     }
 
     .sec2 .accordion__item-btn {
       font-size: 1rem;
     }
-
   }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width: 550px) {
   #content {
     .sec1 .left_box p {
       font-size: 2rem;
@@ -569,7 +573,7 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
   }
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width: 480px) {
   #content {
     .sec1 .left_box p {
       font-size: 1.5rem;
@@ -578,8 +582,8 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
 }
 
 /* 갤럭시 모바일 */
-@media screen and (max-width:400px) {
-  #content section{
+@media screen and (max-width: 400px) {
+  #content section {
     padding-bottom: 30px;
   }
 
@@ -643,6 +647,5 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     span {
       font-size: 2.1rem;
     }
-
   }
 }
