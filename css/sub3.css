@@ -577,6 +577,9 @@ width: 100%; text-align: center; font-size: 4em; color: #f00;} */
     .sec1 .left_box p {
       font-size: 1.5rem;
     }
+    span {
+      font-size: 1.8rem;
+    }
   }
 }
 
