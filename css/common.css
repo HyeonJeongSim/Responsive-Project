@@ -541,6 +541,10 @@ section {
   #wrap {
     min-width: 320px;
   }
+  #headerArea #gnb ul li a {
+    font-size: 1.1em;
+    padding: 0;
+  }
   #footerArea li {
     text-align: center;
     font-size: 4vw;
